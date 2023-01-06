@@ -7,20 +7,31 @@ The repository contains a folder **lib** with all the plugin source code and a t
 #### How to Use it
  
 1. Create a react-web-component
-   Example: 
-`const TestComponent = () => {
-    
+Example: 
+```javascript
+   const TestComponent = () => {
     return (
-    <div className="info">
-    <button className="info">
-    </button>
-    </div>
-    )
+      <div className="info">
+       <button className="info">Button</button>
+      </div>
+     )
     }
-    
-    export default TestComponent;`
+```
 
-2. Then call the ReactWebComponent method like this:
-   `ReactWebComponent(TestComponent);`
-
+2. Then call the ReactWebComponent method
+Example:
+```javascript
+ReactWebComponent(TestComponent);
+```
+3. You can use the web-component on your HTML (The web-component is created with the name of the react-component)
+Example:
+```html
+<test-component></test-component>
+```
 #### Config
+You can add a second parameter, on the ReactWebComponent method, that will let you configure it.
+By default (without config) there is no shadowRoot, If you want to add one you must configure it by adding the property shadowConfig with one of thoses values: 
+ - 'no-shadow' : will not create shadow DOM
+ - 'open', enable access to shadow DOM with the JavaScript
+ - 'closed', disable access to shadow DOM with the JavaScript
+
