@@ -5,14 +5,8 @@ import { ReactWebComponent } from './lib';
 import RwcTypesEnum from './lib/components/rwc-types.enum';
 import { ShadowConfigEnum } from './lib/components/react-web-component/web-component-generator';
 import test from './test.shadow.scss?inline';
-console.log(test);
-ReactWebComponent(TestComponent, {
-  shadowConfig: ShadowConfigEnum.CLOSED_SHADOW,
-  shadowStyle: test,
-  attrsTypes: {
-    test: RwcTypesEnum.INTEGER
-  }
-});
+
+ReactWebComponent(TestComponent, {});
 
 function App() {
 

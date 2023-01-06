@@ -2,7 +2,6 @@ import ReactDOM, { Root } from 'react-dom/client';
 import React from 'react';
 import RwcTypesEnum from '../rwc-types.enum';
 import transformStringValueToTyped from '../../utils/type.utils';
-import testStyle from './test.scss';
 
 export enum ShadowConfigEnum {
   NO_SHADOW = 'no-shadow', // Do not create shadow dom

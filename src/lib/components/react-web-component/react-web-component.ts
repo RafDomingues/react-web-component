@@ -16,12 +16,12 @@ interface ReactWebComponentConfig {
  * @return the web component name
  * @constructor
  */
-function ReactWebComponent<P extends object>
-(ReactComponent: React.FunctionComponent<P>, { attrsTypes, shadowConfig, shadowStyle }: ReactWebComponentConfig): string {
+function ReactWebComponent<P extends object | undefined>
+(ReactComponent: React.FunctionComponent, { attrsTypes, shadowConfig, shadowStyle }: ReactWebComponentConfig): string {
   const reactComponentName: string = camelCaseToKebabCase(ReactComponent.name);
   // define the web component name
   customElements.define(reactComponentName,
-    generateWebComponent<P>(ReactComponent, attrsTypes, shadowConfig, shadowStyle));
+    generateWebComponent(ReactComponent, attrsTypes, shadowConfig, shadowStyle));
   return reactComponentName;
 }
 
